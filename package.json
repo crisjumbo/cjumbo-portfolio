@@ -1,0 +1,110 @@
+{
+  "homepage": "http://.",
+  "name": "pto",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "framer-motion": "^2.9.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.dev.ts",
+    "build": "webpack --config ./webpack.prod.ts",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
+    "tsc": "tsc --watch --noEmit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint",
+      "pre-push": "npm run test:no-watch"
+    },
+    "lint-staged": {
+      "*.{js,ts,tsx}": [
+        "eslint --fix"
+      ]
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.7",
+    "@babel/runtime": "^7.12.5",
+    "@types/fork-ts-checker-webpack-plugin": "^0.4.5",
+    "@types/node": "^14.14.10",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/styled-components": "^5.1.5",
+    "@types/webpack": "^4.41.25",
+    "@types/webpack-dev-server": "^3.11.1",
+    "@types/webpack-merge": "^4.1.5",
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
+    "add-asset-html-webpack-plugin": "^3.1.3",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "fork-ts-checker-webpack-plugin": "^6.0.3",
+    "glob": "^7.1.6",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.0",
+    "husky": "^4.3.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^1.3.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "prettier": "^2.2.0",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.11",
+    "ts-node": "^9.0.0",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "typescript": "^4.1.2",
+    "webpack": "^5.3.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.3.0"
+  },
+  "description": "Welcome to my Portfolio repository, I hope you enjoyed the App experience. Here you will find how I do work, structure my projects. I am sure you will find a lot of inspiration in this soup of code :sweat_smile: .  If you see any issue or bad practice, please let me know through a message or a pull-request ! Thank you :rocket: :rocket: :rocket: .",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tonnraus/Cristopher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tonnraus/Cristopher/issues"
+  }
+}
