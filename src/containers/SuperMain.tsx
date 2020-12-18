@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState, useCallback } from 'react';
+import React, { useEffect, useContext, useState, useLayoutEffect } from 'react';
 import AppContext from '../context/AppContext';
 import { useLocation } from 'react-router-dom';
 
@@ -8,19 +8,13 @@ import Contact from './Contact';
 import About from './About';
 import setOrder from './setOrder';
 
-const SuperMain = () => {
+const SuperMain: React.FC = () => {
   const { state } = useContext(AppContext);
   const main = state?.main;
   const location = main?.location;
   const { pathname } = useLocation();
   const [style, setStyle] = useState(setOrder(pathname));
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  //   useLayoutEffect(() => {
-  //     const layout = setOrder(pathname);
-  //     setStyle(layout);
-  //   }, [pathname]);
-  console.log(location);
   useEffect(() => {
     const layout = setOrder(location);
     setStyle({
@@ -33,6 +27,9 @@ const SuperMain = () => {
       contactDisplay: `${layout.contactDisplay}`,
     });
   }, [location, style]);
+  // This solution for this is to trigger the backward or forward keys
+  // || Another solution that evolves the render is with an effect with two different parameter
+  // location and pathname.
 
   return (
     <SSuperMain>

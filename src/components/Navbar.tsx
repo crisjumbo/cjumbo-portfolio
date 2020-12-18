@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import {
@@ -75,6 +75,9 @@ const Navbar: React.FC = () => {
         return console.log('The path introduced is wrong');
     }
   };
+  useEffect(() => {
+    slideTo(pathname);
+  }, [pathname, slideTo]);
 
   const display = state?.display;
   const handleDisplayBlock = (media) => {
