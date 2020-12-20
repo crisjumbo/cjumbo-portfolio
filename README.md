@@ -31,6 +31,9 @@ Here all packages installed and a short short description, one line please.
 
 ## Backlog
 Here all the main task the App is compose of, Issues presented during this process will be point out, noted and all kind of information used to slove them will be in Notion.
+#### Issues
+1. useEffect on About page is making a loop effect, due it calls 
+style state and it modifies style object. !!!!!!
 
 ## Contact
 A product designed and made by chr

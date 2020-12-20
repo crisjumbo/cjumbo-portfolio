@@ -6,15 +6,19 @@
 ██║  ██║╚██████╔╝╚██████╔╝   ██║       ██║  ██║██║     ██║     
 ╚═╝  ╚═╝ ╚═════╝  ╚═════╝    ╚═╝       ╚═╝  ╚═╝╚═╝     ╚═╝     
 */
+//- Dependencies
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Error404 from '../containers/NotFound';
-import SuperMain from '../containers/SuperMain';
-import PreHome from '../containers/PreHome';
+//-- Components
 import GlobalStyles from '../globalStyles';
 import Layout from '../components/Layout';
+import PreHome from '../containers/PreHome';
+import SuperMain from '../containers/SuperMain';
+import Error404 from '../containers/NotFound';
+//-- Hooks
 import AppContext from '../context/AppContext';
 import useInitializeState from '../hooks/useInitializeState';
+
 //-- Main Component: the root of the whole App
 const App = (): JSX.Element => {
   //-- Variables & Hooks

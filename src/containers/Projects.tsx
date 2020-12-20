@@ -6,8 +6,7 @@
 ██║     ██║  ██║╚██████╔╝╚█████╔╝███████╗╚██████╗   ██║   ███████║
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚══════╝
 */
-import React, { useContext } from 'react';
-import AppContext from '../context/AppContext';
+import React from 'react';
 import {
   SMain,
   SSection,
@@ -19,20 +18,15 @@ import {
   CardBodyBack,
   CardBodyImg,
   SSeeMore,
-} from '../assets/styled/Home';
+} from '../assets/styled/containers/Projects';
 
-import togologo from '../assets/statics/togologo.png';
+// import togologo from '../assets/statics/togologo.png';
 import project1 from '../assets/statics/project1.png';
 import project2 from '../assets/statics/project2.png';
 import project3 from '../assets/statics/project3.jpg';
 
 //-- Component Home
 const Projects: React.FC = () => {
-  //-- Variables & Hooks
-  const { state } = useContext(AppContext);
-  const main = state?.main;
-  const position = main.current;
-
   //-- Render of the component Home
   return (
     <SMain>

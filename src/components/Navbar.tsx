@@ -19,59 +19,57 @@ import {
   StyledButton,
 } from '../assets/styled/components/Navbar';
 
-import logo6 from '../assets/statics/logoChr.png';
+// import logo6 from '../assets/statics/logoChr.png';
 import contactLogo from '../assets/statics/ContactLogo.png';
 import aboutLogo from '../assets/statics/AboutLogo.png';
-import logo6face from '../assets/statics/logo6face.png';
-import logo6link from '../assets/statics/logo6link.png';
-import logo6inst from '../assets/statics/logo6inst.png';
-import logo6gith from '../assets/statics/logo6gith.png';
+import { UseInitializeState } from 'types/app';
+// import logo6face from '../assets/statics/logo6face.png';
+// import logo6link from '../assets/statics/logo6link.png';
+// import logo6inst from '../assets/statics/logo6inst.png';
+// import logo6gith from '../assets/statics/logo6gith.png';
 //-- Component Navbar
 const Navbar: React.FC = () => {
   //-- Variables & Hooks
-  const { state, displayBlock, displayNone, moveToLeft, moveToRight, noMovement, renderExtra, slideTo } = useContext(
-    AppContext,
-  );
+  const { state, displayBlock, displayNone, slideTo } = useContext<UseInitializeState>(AppContext);
   const [logo, setLogo] = useState({
     opacity: '1',
   });
   const { pathname } = useLocation();
   const history = useHistory();
   useEffect(() => {
-    slideTo(pathname);
+    slideTo && slideTo(pathname);
   }, [pathname, slideTo]);
 
   const display = state?.display;
-  const handleDisplayBlock = (media) => {
+  const handleDisplayBlock = (media: string) => {
     // make opacity from 1-0
     setLogo({
       opacity: '0',
     });
     setTimeout(() => {
-      displayBlock(media);
+      displayBlock && displayBlock(media);
       setLogo({
         opacity: '1',
       });
     }, 1000);
   };
   //-- Functions & Handler
-  const handleToAbout = (e) => {
+  const handleToAbout = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     //If i am in about disable this button
     switch (pathname) {
       case '/about':
         return console.log('paths are the same Do nothing  ');
       case '/projects':
-        setTimeout(() => slideTo('/about'), 1000);
+        setTimeout(() => slideTo && slideTo('/about'), 1000);
         return setTimeout(() => history.push('/about'), 5000);
       case '/contact':
-        renderExtra('about');
         return history.push('/about');
       default:
         return console.log('The path introduced is wrong');
     }
   };
-  const handleToContact = (e) => {
+  const handleToContact = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     history.push('/contact');
     //If I am in contact disable this button
@@ -86,7 +84,7 @@ const Navbar: React.FC = () => {
         return console.log('The path introduced is wrong');
     }
   };
-  const handleToProjects = (e) => {
+  const handleToProjects = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     history.push('/projects');
     //If I am in projects desable this button
@@ -107,10 +105,12 @@ const Navbar: React.FC = () => {
       opacity: '0',
     });
     setTimeout(() => {
-      displayNone();
-      setLogo({
-        opacity: '1',
-      });
+      if (displayNone) {
+        displayNone();
+        setLogo({
+          opacity: '1',
+        });
+      }
     }, 1000);
   };
   //-- Render of the component Navbar
@@ -135,9 +135,9 @@ const Navbar: React.FC = () => {
         <LogoContainer to="/projects" onClick={(e) => handleToProjects(e)}>
           <Logo
             style={{ transitionProperty: 'opacity', transitionDuration: '1s', opacity: `${logo.opacity}` }}
-            className={display.delay}
-            src={display.src}
-            alt={display.name}
+            className={display?.delay}
+            src={display?.src}
+            alt={display?.name}
           />
         </LogoContainer>
         <StyledList>

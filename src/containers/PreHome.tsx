@@ -7,7 +7,7 @@
 ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝
 */
 import React from 'react';
-import { SMain, SWrapper, SImg, SLink } from '../assets/styled/PreHome';
+import { SMain, SWrapper, SImg, SLink } from '../assets/styled/containers/PreHome';
 // const personalLogo = require('../assets/statics/logoChr.png');
 import PersonalLogo from '../assets/statics/logoChr.png';
 

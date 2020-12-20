@@ -1,31 +1,4 @@
-interface AppState {
-  main: {
-    location: string;
-    center: string;
-    onLeft: string;
-    onRight: string;
-    relative: string;
-    absolute: string;
-  };
-  display: {
-    id: number;
-    name: string;
-    src: string;
-    delay: string;
-  };
-  textShowed: {
-    id: number;
-    name: string;
-    text: string;
-  };
-  movement: {
-    toRight: boolean;
-    toLeft: boolean;
-  };
-  allMovements: [];
-  allLogos: [];
-  allTexts: [];
-}
+import { AppState } from './types/app';
 /* State of the App Context */
 const initialState: AppState = {
   main: {
