@@ -1,3 +1,4 @@
+/* State of the App Context */
 const initialState = {
   main: {
     location: '',

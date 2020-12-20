@@ -1,10 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 import Layout from '../components/Layout';
-import { SMain, SFormBox, SNavBox, STextarea, SSubmit, SInputBox, SInput, SUnderLine } from '../assets/styled/Contact';
+import {
+  SMain,
+  SFormBox,
+  SNavBox,
+  STextarea,
+  SSubmit,
+  SInputBox,
+  SInput,
+  SUnderLine,
+} from '../assets/styled/containers/Contact';
 
+//-- Component Contact
 const Contact: React.FC = () => {
+  //-- Render of the component Contact
   return (
     <SMain>
       <h2>Let&aposs keep in touch</h2>

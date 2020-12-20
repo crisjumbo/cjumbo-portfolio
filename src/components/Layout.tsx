@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyledLayout } from '../assets/styled/layouts';
-
 import Navbar from './Navbar';
 import Footer from './Footer';
 
+//-- Component Layout
 const Layout = (props: { children: JSX.Element }): JSX.Element => {
+  //-- Render of the component Layout
   return (
     <StyledLayout>
       <Navbar />

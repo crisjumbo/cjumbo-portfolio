@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react';
-
-import { SMain, SSection, SButton, STextCard } from '../assets/styled/About';
+import { SMain, SSection, SButton, STextCard } from '../assets/styled/containers/About';
 import AppContext from '../context/AppContext';
 
+//-- Component About
 const About: React.FC = () => {
+  //-- Variables & Hooks
   const { state, displayText, noMovement } = useContext(AppContext);
   const textShowed = state?.textShowed;
   const [text, setText] = useState({
@@ -13,6 +14,7 @@ const About: React.FC = () => {
     idioms: 'normal',
     technologies: 'normal',
   });
+  //-- Functions & Handlers
   const handleClick = (name: string) => {
     setText({
       ...text,
@@ -25,6 +27,7 @@ const About: React.FC = () => {
     });
     displayText(name);
   };
+  //-- Render of the component About
   return (
     <SMain>
       <SSection className="section">

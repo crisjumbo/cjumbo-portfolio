@@ -1,5 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useContext } from 'react';
 import AppContext from '../context/AppContext';
 import {
   SMain,
@@ -12,21 +11,21 @@ import {
   CardBodyBack,
   CardBodyImg,
   SSeeMore,
-  SSpan,
 } from '../assets/styled/Home';
-
-import Layout from '../components/Layout';
 
 import togologo from '../assets/statics/togologo.png';
 import project1 from '../assets/statics/project1.png';
 import project2 from '../assets/statics/project2.png';
 import project3 from '../assets/statics/project3.jpg';
 
-const Home: React.FC = () => {
+//-- Component Home
+const Projects: React.FC = () => {
+  //-- Variables & Hooks
   const { state } = useContext(AppContext);
   const main = state?.main;
   const position = main.current;
 
+  //-- Render of the component Home
   return (
     <SMain>
       <h2>Projects</h2>
@@ -106,4 +105,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Projects;

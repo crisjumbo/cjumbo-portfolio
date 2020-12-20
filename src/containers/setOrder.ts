@@ -1,3 +1,4 @@
+//-- Login of how to Organize the Components within the Main
 const setOrder = (pathname) => {
   switch (pathname) {
     case '/projects':
@@ -9,6 +10,7 @@ const setOrder = (pathname) => {
         contactPosition: '-100%',
         contactDisplay: 'none',
       };
+
     case '/about':
       return {
         aboutPosition: '0%',
@@ -18,6 +20,7 @@ const setOrder = (pathname) => {
         contactPosition: '100%',
         contactDisplay: 'none',
       };
+
     case '/contact':
       return {
         aboutPosition: '-100%',
@@ -27,6 +30,7 @@ const setOrder = (pathname) => {
         contactPosition: '100%',
         contactDisplay: 'block',
       };
+
     default:
       return {};
   }

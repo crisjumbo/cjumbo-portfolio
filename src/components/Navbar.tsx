@@ -9,7 +9,7 @@ import {
   StyledList,
   LogoContainer,
   StyledButton,
-} from '../assets/styled/layouts';
+} from '../assets/styled/components/Navbar';
 
 import logo6 from '../assets/statics/logoChr.png';
 import contactLogo from '../assets/statics/ContactLogo.png';
@@ -18,8 +18,9 @@ import logo6face from '../assets/statics/logo6face.png';
 import logo6link from '../assets/statics/logo6link.png';
 import logo6inst from '../assets/statics/logo6inst.png';
 import logo6gith from '../assets/statics/logo6gith.png';
-
+//-- Component Navbar
 const Navbar: React.FC = () => {
+  //-- Variables & Hooks
   const { state, displayBlock, displayNone, moveToLeft, moveToRight, noMovement, renderExtra, slideTo } = useContext(
     AppContext,
   );
@@ -28,7 +29,24 @@ const Navbar: React.FC = () => {
   });
   const { pathname } = useLocation();
   const history = useHistory();
+  useEffect(() => {
+    slideTo(pathname);
+  }, [pathname, slideTo]);
 
+  const display = state?.display;
+  const handleDisplayBlock = (media) => {
+    // make opacity from 1-0
+    setLogo({
+      opacity: '0',
+    });
+    setTimeout(() => {
+      displayBlock(media);
+      setLogo({
+        opacity: '1',
+      });
+    }, 1000);
+  };
+  //-- Functions & Handler
   const handleToAbout = (e) => {
     e.preventDefault();
     //If i am in about disable this button
@@ -75,23 +93,6 @@ const Navbar: React.FC = () => {
         return console.log('The path introduced is wrong');
     }
   };
-  useEffect(() => {
-    slideTo(pathname);
-  }, [pathname, slideTo]);
-
-  const display = state?.display;
-  const handleDisplayBlock = (media) => {
-    // make opacity from 1-0
-    setLogo({
-      opacity: '0',
-    });
-    setTimeout(() => {
-      displayBlock(media);
-      setLogo({
-        opacity: '1',
-      });
-    }, 1000);
-  };
   const handleDisplayNone = () => {
     //make opacity from 0-1
     setLogo({
@@ -104,7 +105,7 @@ const Navbar: React.FC = () => {
       });
     }, 1000);
   };
-
+  //-- Render of the component Navbar
   return (
     <StyledHeader>
       <StyledNav>

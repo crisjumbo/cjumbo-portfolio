@@ -4,7 +4,9 @@ import { SMain, SWrapper, SImg, SLink } from '../assets/styled/PreHome';
 // const personalLogo = require('../assets/statics/logoChr.png');
 import PersonalLogo from '../assets/statics/logoChr.png';
 
+//-- PreHome Component
 const PreHome: React.FC = () => {
+  //-- Render of the component
   return (
     <SMain>
       <SWrapper>

@@ -1,20 +1,21 @@
-import React, { useEffect, useContext, useState, useLayoutEffect } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import AppContext from '../context/AppContext';
 import { useLocation } from 'react-router-dom';
 
-import { SSuperMain } from '../assets/styled/layouts';
-import Projects from './Home';
+import { SSuperMain } from '../assets/styled/containers/SuperMain';
+import Projects from './Projects';
 import Contact from './Contact';
 import About from './About';
 import setOrder from './setOrder';
 
+//-- Component Main of the Portfolio
 const SuperMain: React.FC = () => {
+  //-- Variables & hooks
   const { state } = useContext(AppContext);
-  const main = state?.main;
-  const location = main?.location;
   const { pathname } = useLocation();
   const [style, setStyle] = useState(setOrder(pathname));
-
+  const main = state?.main;
+  const location = main?.location;
   useEffect(() => {
     const layout = setOrder(location);
     setStyle({
@@ -31,6 +32,7 @@ const SuperMain: React.FC = () => {
   // || Another solution that evolves the render is with an effect with two different parameter
   // location and pathname.
 
+  //-- Component Render
   return (
     <SSuperMain>
       <div
