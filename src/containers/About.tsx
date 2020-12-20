@@ -1,3 +1,11 @@
+/*
+ █████╗ ██████╗  ██████╗ ██╗   ██╗████████╗
+██╔══██╗██╔══██╗██╔═══██╗██║   ██║╚══██╔══╝
+███████║██████╔╝██║   ██║██║   ██║   ██║   
+██╔══██║██╔══██╗██║   ██║██║   ██║   ██║   
+██║  ██║██████╔╝╚██████╔╝╚██████╔╝   ██║   
+╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝    ╚═╝   
+*/
 import React, { useContext, useState } from 'react';
 import { SMain, SSection, SButton, STextCard } from '../assets/styled/containers/About';
 import AppContext from '../context/AppContext';

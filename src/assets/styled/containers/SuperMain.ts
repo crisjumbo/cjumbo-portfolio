@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
 
 export const SSuperMain = styled.main`
     max-width: 100vw;

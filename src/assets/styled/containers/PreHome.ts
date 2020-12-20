@@ -8,8 +8,7 @@
 */
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import {pulseVanish} from './animation';
-
+import {pulseVanish} from '../animation';
 export const SMain = styled.main`
   max-width: 100vw;
   max-height: 100vh;

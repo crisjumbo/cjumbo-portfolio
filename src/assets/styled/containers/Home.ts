@@ -7,7 +7,6 @@
 ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝
 */
 import styled from 'styled-components';
-import {slideDown} from './animation';
 
 export const SSeeMore = styled.div`
 position: absolute;

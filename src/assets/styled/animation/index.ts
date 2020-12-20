@@ -11,13 +11,3 @@ export const pulseVanish = keyframes`
       opacity: 0.5;
     }
   `;
-/* Slide Down animation 
-ISSUE: when it is unhover the animation is instant
-export const slideDown = keyframes`
-0%{
-  transform: translateY(0);
-}
-100%{
-  transform: translateY(100%);
-}
-`*/
