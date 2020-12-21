@@ -6,7 +6,7 @@
 ██║ ╚████║██║  ██║ ╚████╔╝ ██████╔╝██║  ██║██║  ██║
 ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 */
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import {
@@ -31,16 +31,20 @@ import { UseInitializeState } from 'types/app';
 const Navbar: React.FC = () => {
   //-- Variables & Hooks
   const { state, displayBlock, displayNone, slideTo } = useContext<UseInitializeState>(AppContext);
+  const display = state?.display;
+  const { pathname } = useLocation();
+  const history = useHistory();
   const [logo, setLogo] = useState({
     opacity: '1',
   });
-  const { pathname } = useLocation();
-  const history = useHistory();
-  useEffect(() => {
-    slideTo && slideTo(pathname);
-  }, [pathname, slideTo]);
-
-  const display = state?.display;
+  /*
+██╗███╗   ██╗███████╗██╗███╗   ██╗██╗████████╗███████╗    ██╗      ██████╗  ██████╗ ██████╗ 
+██║████╗  ██║██╔════╝██║████╗  ██║██║╚══██╔══╝██╔════╝    ██║     ██╔═══██╗██╔═══██╗██╔══██╗
+██║██╔██╗ ██║█████╗  ██║██╔██╗ ██║██║   ██║   █████╗      ██║     ██║   ██║██║   ██║██████╔╝
+██║██║╚██╗██║██╔══╝  ██║██║╚██╗██║██║   ██║   ██╔══╝      ██║     ██║   ██║██║   ██║██╔═══╝ 
+██║██║ ╚████║██║     ██║██║ ╚████║██║   ██║   ███████╗    ███████╗╚██████╔╝╚██████╔╝██║     
+╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚══════╝    ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝     
+*/
   const handleDisplayBlock = (media: string) => {
     // make opacity from 1-0
     setLogo({
@@ -62,7 +66,10 @@ const Navbar: React.FC = () => {
         return console.log('paths are the same Do nothing  ');
       case '/projects':
         setTimeout(() => slideTo && slideTo('/about'), 1000);
-        return setTimeout(() => history.push('/about'), 5000);
+        return setTimeout(() => {
+          history.push('/about');
+          slideTo && slideTo('');
+        }, 2000);
       case '/contact':
         return history.push('/about');
       default:

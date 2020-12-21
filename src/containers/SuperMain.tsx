@@ -9,7 +9,6 @@
 //-- Dependencies
 import React, { useEffect, useContext, useState } from 'react';
 import AppContext from '../context/AppContext';
-//-- Hooks
 import { useLocation } from 'react-router-dom';
 //-- Components & Types
 import { SSuperMain } from '../assets/styled/containers/SuperMain';
@@ -23,11 +22,13 @@ import { UseInitializeState } from 'types/app';
 const SuperMain: React.FC = () => {
   //-- Variables & hooks
   const { state } = useContext<UseInitializeState>(AppContext);
-  const { pathname } = useLocation();
-  const [style, setStyle] = useState(setOrder(pathname));
   const main = state?.main;
+  const { pathname } = useLocation();
   const location = main?.location;
+  // const styleObject = setOrder(pathname);
+  console.log(pathname); // it is making log two ti
   console.log(location);
+  const [style, setStyle] = useState(setOrder(pathname));
   /*
 ██╗███╗   ██╗███████╗██╗███╗   ██╗██╗████████╗███████╗    ██╗      ██████╗  ██████╗ ██████╗ 
 ██║████╗  ██║██╔════╝██║████╗  ██║██║╚══██╔══╝██╔════╝    ██║     ██╔═══██╗██╔═══██╗██╔══██╗
@@ -37,22 +38,9 @@ const SuperMain: React.FC = () => {
 ╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚══════╝    ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝     
 */
   useEffect(() => {
-    const layout = setOrder(location);
-    setStyle({
-      ...style,
-      aboutPosition: `${layout.aboutPosition}`,
-      aboutDisplay: `${layout.aboutDisplay}`,
-      projectsPosition: `${layout.projectsPosition}`,
-      projectsDisplay: `${layout.projectsDisplay}`,
-      contactPosition: `${layout.contactPosition}`,
-      contactDisplay: `${layout.contactDisplay}`,
-    });
-  }, [location, style]);
-  // This solution for this is to trigger the backward or forward keys
-  // || Another solution that evolves the render is with an effect with two different parameter
-  // location and pathname.
-
-  //-- Component Render
+    location ? setStyle(setOrder(location)) : setStyle(setOrder(pathname));
+  }, [location, pathname]);
+  // -- Component Render
   return (
     <SSuperMain>
       <div

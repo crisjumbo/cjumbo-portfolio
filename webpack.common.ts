@@ -1,19 +1,15 @@
-import path from "path";
-import webpack from "webpack";
+import path from 'path';
+import webpack from 'webpack';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 // import ImageminPlugin from 'imagemin-webpack-plugin';
 // import golb from 'glob';
 
-
 const config: webpack.Configuration = {
   entry: {
-    landing: path.resolve(__dirname, "src/index.tsx"),
-    home: path.resolve(__dirname, "src/containers/Home.tsx"),
-    about: path.resolve(__dirname, "src/containers/About.tsx"),
-    contact: path.resolve(__dirname, "src/containers/Contact.tsx"),
+    app: path.resolve(__dirname, 'src/index.tsx'),
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
     rules: [
@@ -21,12 +17,12 @@ const config: webpack.Configuration = {
         test: /\.(jsx|js)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
       {
         test: /\.(tsx|ts)?$/,
-        loader: "ts-loader",
+        loader: 'ts-loader',
         options: { allowTsInNodeModules: true },
         exclude: /node_modules/,
       },
@@ -34,16 +30,16 @@ const config: webpack.Configuration = {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: 'html-loader',
           },
         ],
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
-            outputPath: "assets/",
+            outputPath: 'assets/',
           },
         },
       },
@@ -53,7 +49,7 @@ const config: webpack.Configuration = {
     new ForkTsCheckerWebpackPlugin({
       async: false,
       eslint: {
-        files: "./src/**/*",
+        files: './src/**/*',
       },
     }),
     // new ImageminPlugin({
@@ -67,9 +63,9 @@ const config: webpack.Configuration = {
   ],
   optimization: {
     splitChunks: {
-      chunks: "all",
+      chunks: 'all',
       minSize: 0,
-      name: "commons",
+      name: 'commons',
     },
   },
 };

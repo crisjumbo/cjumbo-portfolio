@@ -6,7 +6,7 @@
 ╚██████╗╚██████╔╝██║ ╚████║   ██║   ██║  ██║╚██████╗   ██║   
  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝   ╚═╝   
 */
-import React from 'react';
+import React, { useState } from 'react';
 import {
   SMain,
   SFormBox,
@@ -20,27 +20,46 @@ import {
 
 //-- Component Contact
 const Contact: React.FC = () => {
+  //-- Variables & hooks
+  const [values, setValues] = useState({
+    name: '',
+    email: '',
+    text: '',
+  });
+  //-- Functions & handlers
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    const { name, value } = e.currentTarget;
+    setValues({
+      ...values,
+      [`${name}`]: `${value}`,
+    });
+  };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log('You submitted me');
+  };
   //-- Render of the component Contact
   return (
     <SMain>
       <h2>Let&aposs keep in touch</h2>
-      <SFormBox>
+      <SFormBox onSubmit={handleSubmit}>
         <SNavBox>
           <SInputBox>
-            <SInput className="input__box" placeholder="name" />
+            <SInput name="name" type="text" onChange={handleChange} value={values.name} placeholder="name" />
             <SUnderLine />
           </SInputBox>
           <SInputBox>
-            <SInput className="input__box" placeholder="email" />
+            <SInput name="email" type="email" onChange={handleChange} value={values.email} placeholder="email" />
             <SUnderLine />
           </SInputBox>
           <SInputBox>
-            <SInput className="input__box" placeholder="matter" />
+            <SInput name="text" type="text" onChange={handleChange} value={values.text} placeholder="matter" />
             <SUnderLine />
           </SInputBox>
         </SNavBox>
-        <STextarea className="contact-box__textarea" placeholder="Message..."></STextarea>
-        <SSubmit className="button--submit" value="Submit" />
+        <STextarea placeholder="Message..."></STextarea>
+        <SSubmit type="submit" />
       </SFormBox>
     </SMain>
   );

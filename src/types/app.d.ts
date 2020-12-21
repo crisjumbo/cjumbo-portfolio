@@ -7,7 +7,7 @@
 ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝       ╚══════╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝   ╚══════╝
 */
 export interface MainObject {
-  location?: string;
+  location?: string | '' | undefined;
   center?: string;
   onLeft?: string;
   onRight?: string;

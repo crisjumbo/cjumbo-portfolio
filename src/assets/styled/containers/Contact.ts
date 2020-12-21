@@ -19,7 +19,7 @@ height:100%;
 padding-top: 30px;
 `;
 
-export const SFormBox = styled.div`
+export const SFormBox = styled.form`
 background-color: transparent;
 display: flex;
 justify-content: space-between;
@@ -54,7 +54,7 @@ color: #f3e8e8;
 background-color: transparent;
 `;
 
-export const SSubmit = styled.input`
+export const SSubmit = styled.button`
 width: 100%;
 background: linear-gradient(#8bddf2,#345e68);
 color: #1b1720;
