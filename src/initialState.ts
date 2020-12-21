@@ -2,7 +2,8 @@ import { AppState } from './types/app';
 /* State of the App Context */
 const initialState: AppState = {
   main: {
-    location: '',
+    toLeft: false,
+    toRight: false,
     center: '0%',
     onLeft: '-100%',
     onRight: '100%',

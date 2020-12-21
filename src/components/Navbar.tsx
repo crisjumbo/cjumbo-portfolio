@@ -30,7 +30,9 @@ import { UseInitializeState } from 'types/app';
 //-- Component Navbar
 const Navbar: React.FC = () => {
   //-- Variables & Hooks
-  const { state, displayBlock, displayNone, slideTo } = useContext<UseInitializeState>(AppContext);
+  const { state, displayBlock, displayNone, slideToLeft, slideToRight, noSlide } = useContext<UseInitializeState>(
+    AppContext,
+  );
   const display = state?.display;
   const { pathname } = useLocation();
   const history = useHistory();
@@ -60,52 +62,63 @@ const Navbar: React.FC = () => {
   //-- Functions & Handler
   const handleToAbout = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
-    //If i am in about disable this button
     switch (pathname) {
       case '/about':
         return console.log('nothing to do');
       case '/projects':
-        setTimeout(() => slideTo && slideTo('/about'), 500);
+        slideToLeft && slideToLeft();
         return setTimeout(() => {
           history.push('/about');
-          slideTo && slideTo('');
-        }, 1000);
+          noSlide && noSlide();
+        }, 1100);
       case '/contact':
-        setTimeout(() => slideTo && slideTo('/about'), 500);
+        slideToRight && slideToRight();
         return setTimeout(() => {
           history.push('/about');
-          slideTo && slideTo('');
-        }, 1000);
+          noSlide && noSlide();
+        }, 1100);
       default:
         return console.log('The path introduced is wrong');
     }
   };
   const handleToContact = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
-    history.push('/contact');
-    //If I am in contact disable this button
     switch (pathname) {
       case '/contact':
         return console.log('paths are the same Do nothing');
       case '/projects':
-        return console.log('Contact page from left to right');
+        slideToRight && slideToRight();
+        return setTimeout(() => {
+          history.push('/contact');
+          noSlide && noSlide();
+        }, 1100);
       case '/about':
-        return console.log('Contact page from right to left');
+        slideToLeft && slideToLeft();
+        return setTimeout(() => {
+          history.push('/contact');
+          noSlide && noSlide();
+        }, 1100);
       default:
         return console.log('The path introduced is wrong');
     }
   };
   const handleToProjects = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
-    history.push('/projects');
-    //If I am in projects desable this button
     switch (pathname) {
       case '/projects':
         return console.log('paths are the same Do nothing');
       case '/contact':
-        return console.log('Projects page from right to left');
+        slideToLeft && slideToLeft();
+        return setTimeout(() => {
+          history.push('/projects');
+          noSlide && noSlide();
+        }, 1100);
       case '/about':
-        return console.log('Projects page from left to right');
+        slideToRight && slideToRight();
+        return setTimeout(() => {
+          history.push('/projects');
+          noSlide && noSlide();
+        }, 1100);
       default:
         return console.log('The path introduced is wrong');
     }

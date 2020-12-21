@@ -9,11 +9,28 @@ const useInitializeState = (): UseInitializeState => {
   const [state, setState] = useState(initialState);
 
   // -- Reducer to slide towards the page selected
-  const slideTo = (path: string) => {
+  const slideToLeft = () => {
     setState({
       ...state,
       main: {
-        location: path,
+        toLeft: true,
+      },
+    });
+  };
+  const slideToRight = () => {
+    setState({
+      ...state,
+      main: {
+        toRight: true,
+      },
+    });
+  };
+  const noSlide = () => {
+    setState({
+      ...state,
+      main: {
+        toRight: false,
+        toLeft: false,
       },
     });
   };
@@ -90,7 +107,9 @@ const useInitializeState = (): UseInitializeState => {
   //-- Object returned by the hook: State & Reducers
   return {
     state,
-    slideTo,
+    slideToLeft,
+    noSlide,
+    slideToRight,
     noMovement,
     moveToRight,
     moveToLeft,

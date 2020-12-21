@@ -7,7 +7,8 @@
 ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝       ╚══════╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝   ╚══════╝
 */
 export interface MainObject {
-  location?: string | '' | undefined;
+  toLeft?: boolean;
+  toRight?: boolean;
   center?: string;
   onLeft?: string;
   onRight?: string;
@@ -57,7 +58,9 @@ export interface AppState {
 //-- useInitializeState
 export interface UseInitializeState {
   state?: AppState;
-  slideTo?: (path: string) => void;
+  slideToLeft?: () => void;
+  slideToRight?: () => void;
+  noSlide?: () => void;
   noMovement?: () => void;
   moveToRight?: (movement: boolean) => void;
   moveToLeft?: (movement: boolean) => void;

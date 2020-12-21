@@ -24,11 +24,9 @@ const SuperMain: React.FC = () => {
   const { state } = useContext<UseInitializeState>(AppContext);
   const main = state?.main;
   const { pathname } = useLocation();
-  const location = main?.location;
-  // const styleObject = setOrder(pathname);
-  console.log(pathname); // it is making log two ti
-  console.log(location);
   const [style, setStyle] = useState(setOrder(pathname));
+  // play with the fucking transition because that is what is killing you
+
   /*
 ██╗███╗   ██╗███████╗██╗███╗   ██╗██╗████████╗███████╗    ██╗      ██████╗  ██████╗ ██████╗ 
 ██║████╗  ██║██╔════╝██║████╗  ██║██║╚══██╔══╝██╔════╝    ██║     ██╔═══██╗██╔═══██╗██╔══██╗
@@ -37,38 +35,58 @@ const SuperMain: React.FC = () => {
 ██║██║ ╚████║██║     ██║██║ ╚████║██║   ██║   ███████╗    ███████╗╚██████╔╝╚██████╔╝██║     
 ╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚══════╝    ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝     
 */
+  const slideTo = () => {
+    if (!main?.toLeft && !main?.toRight) {
+      return undefined;
+    }
+    if (main?.toLeft) {
+      return {
+        transform: 'translateX(-100vw)',
+        transitionProperty: 'transform',
+        transitionDuration: '1s',
+        transitionTimingFunction: 'linear',
+      };
+    }
+    if (main?.toRight) {
+      return {
+        transform: 'translateX(100vw)',
+        transitionProperty: 'transform',
+        transitionDuration: '0.5s',
+        transitionTimingFunction: 'linear',
+      };
+    }
+  };
   useEffect(() => {
-    location ? setStyle(setOrder(location)) : setStyle(setOrder(pathname));
-  }, [location, pathname]);
+    setStyle(setOrder(pathname));
+  }, [pathname]);
   // -- Component Render
   return (
     <SSuperMain>
-      <div
-        className="div_container"
-        style={{
-          transform: `translateX(${style.projectsPosition})`,
-          zIndex: style.projectsDisplay,
-        }}
-      >
-        <Projects />
-      </div>
-      <div
-        className="div_container"
-        style={{
-          transform: `translateX(${style.contactPosition})`,
-          zIndex: style.contactDisplay,
-        }}
-      >
-        <Contact />
-      </div>
-      <div
-        className="div_container"
-        style={{
-          transform: `translateX(${style.aboutPosition})`,
-          zIndex: style.aboutDisplay,
-        }}
-      >
-        <About />
+      <div className="super-container" style={slideTo()}>
+        <div
+          className="div_container"
+          style={{
+            transform: `translateX(${style.projectsPosition})`,
+          }}
+        >
+          <Projects />
+        </div>
+        <div
+          className="div_container"
+          style={{
+            transform: `translateX(${style.contactPosition})`,
+          }}
+        >
+          <Contact />
+        </div>
+        <div
+          className="div_container"
+          style={{
+            transform: `translateX(${style.aboutPosition})`,
+          }}
+        >
+          <About />
+        </div>
       </div>
     </SSuperMain>
   );
