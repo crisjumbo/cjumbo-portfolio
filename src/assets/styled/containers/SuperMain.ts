@@ -4,11 +4,11 @@ export const SSuperMain = styled.main`
     max-width: 100vw;
     position: relative;
     overflow: hidden;
-    background-color: rgb(22, 18, 26);
     .div_container{
-transition-property: transform;
+background-color: rgb(22, 18, 26);
+transition-property: transform, z-index;
 transition-duration: 1s;
-transition-timing-function: ease;
+transition-timing-function: linear;
 position: absolute;
 width: 100vw;
 height:100%;

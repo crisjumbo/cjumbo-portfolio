@@ -6,45 +6,29 @@
    ██║   ██║  ██║██║  ██║██║ ╚████║███████║██║   ██║   ██║╚██████╔╝██║ ╚████║
    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 */
-import { TransitionObject } from '../types/app';
-//-- Login of how to Organize the Components within the Main
-const setOrder = (pathname: string | ''): TransitionObject => {
-  switch (pathname) {
-    case '/projects':
-      return {
-        aboutPosition: '100%',
-        aboutDisplay: 1,
-        projectsPosition: '0%',
-        projectsDisplay: 3,
-        contactPosition: '-100%',
-        contactDisplay: 2,
-      };
+const setPageSlide = (from, to) => {
+    if(from === '/projects'){
+        if(to === '/about'){
 
-    case '/about':
-      return {
-        aboutPosition: '0%',
-        aboutDisplay: 3,
-        projectsPosition: '-100%',
-        projectsDisplay: 2,
-        contactPosition: '100%',
-        contactDisplay: 1,
-      };
+        }
+        if(to === '/contact'){
 
-    case '/contact':
-      return {
-        aboutPosition: '-100%',
-        aboutDisplay: 2,
-        projectsPosition: '100%',
-        projectsDisplay: 1,
-        contactPosition: '0%',
-        contactDisplay: 3,
-      };
+        }
+    }
+    if(from === '/about'){
+        if(to === '/contact'){
 
-    default:
-      return {
-        message: 'This is an error message',
-      };
-  }
+        }
+        if(to === '/projects')
+    }
+    if(from === '/contact'){
+        if(to === '/about'){
+
+        }
+        if(to === '/projects'){
+            
+        }
+    }
 };
 
-export default setOrder;
+export default setPageSlide;

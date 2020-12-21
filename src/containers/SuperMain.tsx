@@ -47,6 +47,7 @@ const SuperMain: React.FC = () => {
         className="div_container"
         style={{
           transform: `translateX(${style.projectsPosition})`,
+          zIndex: style.projectsDisplay,
         }}
       >
         <Projects />
@@ -55,6 +56,7 @@ const SuperMain: React.FC = () => {
         className="div_container"
         style={{
           transform: `translateX(${style.contactPosition})`,
+          zIndex: style.contactDisplay,
         }}
       >
         <Contact />
@@ -63,6 +65,7 @@ const SuperMain: React.FC = () => {
         className="div_container"
         style={{
           transform: `translateX(${style.aboutPosition})`,
+          zIndex: style.aboutDisplay,
         }}
       >
         <About />

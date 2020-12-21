@@ -63,15 +63,19 @@ const Navbar: React.FC = () => {
     //If i am in about disable this button
     switch (pathname) {
       case '/about':
-        return console.log('paths are the same Do nothing  ');
+        return console.log('nothing to do');
       case '/projects':
-        setTimeout(() => slideTo && slideTo('/about'), 1000);
+        setTimeout(() => slideTo && slideTo('/about'), 500);
         return setTimeout(() => {
           history.push('/about');
           slideTo && slideTo('');
-        }, 2000);
+        }, 1000);
       case '/contact':
-        return history.push('/about');
+        setTimeout(() => slideTo && slideTo('/about'), 500);
+        return setTimeout(() => {
+          history.push('/about');
+          slideTo && slideTo('');
+        }, 1000);
       default:
         return console.log('The path introduced is wrong');
     }
