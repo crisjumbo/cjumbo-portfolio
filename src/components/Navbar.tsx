@@ -6,7 +6,7 @@
 ██║ ╚████║██║  ██║ ╚████╔╝ ██████╔╝██║  ██║██║  ██║
 ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 */
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import {
@@ -22,6 +22,7 @@ import {
 // import logo6 from '../assets/statics/logoChr.png';
 import contactLogo from '../assets/statics/ContactLogo.png';
 import aboutLogo from '../assets/statics/AboutLogo.png';
+import brandLogo from '../assets/statics/logoChr.png';
 import { UseInitializeState } from 'types/app';
 // import logo6face from '../assets/statics/logo6face.png';
 // import logo6link from '../assets/statics/logo6link.png';
@@ -39,14 +40,16 @@ const Navbar: React.FC = () => {
   const [logo, setLogo] = useState({
     opacity: '1',
   });
-  /*
-██╗███╗   ██╗███████╗██╗███╗   ██╗██╗████████╗███████╗    ██╗      ██████╗  ██████╗ ██████╗ 
-██║████╗  ██║██╔════╝██║████╗  ██║██║╚══██╔══╝██╔════╝    ██║     ██╔═══██╗██╔═══██╗██╔══██╗
-██║██╔██╗ ██║█████╗  ██║██╔██╗ ██║██║   ██║   █████╗      ██║     ██║   ██║██║   ██║██████╔╝
-██║██║╚██╗██║██╔══╝  ██║██║╚██╗██║██║   ██║   ██╔══╝      ██║     ██║   ██║██║   ██║██╔═══╝ 
-██║██║ ╚████║██║     ██║██║ ╚████║██║   ██║   ███████╗    ███████╗╚██████╔╝╚██████╔╝██║     
-╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚══════╝    ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝     
-*/
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+  useEffect(() => {
+    window.addEventListener('resize', updateDimensions);
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
   const handleDisplayBlock = (media: string) => {
     // make opacity from 1-0
     setLogo({
@@ -156,14 +159,17 @@ const Navbar: React.FC = () => {
             </StyledButton>
           </li>
         </StyledList>
-        <LogoContainer to="/projects" onClick={(e) => handleToProjects(e)}>
-          <Logo
-            style={{ transitionProperty: 'opacity', transitionDuration: '1s', opacity: `${logo.opacity}` }}
-            className={display?.delay}
-            src={display?.src}
-            alt={display?.name}
-          />
-        </LogoContainer>
+        {width > 900 && (
+          // Logo appears when the screen is over 900px
+          <LogoContainer to="/projects" onClick={(e) => handleToProjects(e)}>
+            <Logo
+              style={{ transitionProperty: 'opacity', transitionDuration: '1s', opacity: `${logo.opacity}` }}
+              className={display?.delay}
+              src={display?.src}
+              alt={display?.name}
+            />
+          </LogoContainer>
+        )}
         <StyledList>
           <li>
             <StyledButton
@@ -187,6 +193,14 @@ const Navbar: React.FC = () => {
         <Link to="/contact" onClick={(e) => handleToContact(e)}>
           <Logo src={contactLogo} alt="contact logo button" />
         </Link>
+        {
+          // Here loco when the screen reachs 900px
+          width < 900 && (
+            <Link to="/projects" onClick={(e) => handleToProjects(e)}>
+              <Logo src={brandLogo} alt="Brand Logo" />
+            </Link>
+          )
+        }
         <Link to="/about" onClick={(e) => handleToAbout(e)}>
           <Logo src={aboutLogo} alt="about logo button" />
         </Link>

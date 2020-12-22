@@ -17,7 +17,6 @@ import {
   CardBodyFront,
   CardBodyBack,
   CardBodyImg,
-  SSeeMore,
 } from '../assets/styled/containers/Projects';
 
 // import togologo from '../assets/statics/togologo.png';
@@ -101,7 +100,6 @@ const Projects: React.FC = () => {
             </CardBodyContainer>
           </SCardBody>
         </SCard>
-        <SSeeMore>{'more projects'}</SSeeMore>
       </SSection>
     </SMain>
   );

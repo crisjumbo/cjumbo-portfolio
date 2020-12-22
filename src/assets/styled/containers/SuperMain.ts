@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SSuperMain = styled.main`
     max-width: 100vw;
+    height:100%;
     position: relative;
     overflow: hidden;
     .super-container{
@@ -14,6 +15,5 @@ position: absolute;
 width: 100vw;
 height:100%;
 top: 0;
-left: 0;
     }
 `
