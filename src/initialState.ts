@@ -5,6 +5,11 @@ import facebookLogo from './assets/statics/logo6face.png';
 import twitterLogo from './assets/statics/logo6twit.png';
 import githubLogo from './assets/statics/logo6gith.png';
 import linkedinLogo from './assets/statics/logo6link.png';
+// -- Project images
+import project1 from './assets/statics/project1.png';
+import project2 from './assets/statics/project2.png';
+import project3 from './assets/statics/project3.jpg';
+import noImageYet from './assets/statics/NoImageYet.png';
 
 const initialState: AppState = {
   main: {
@@ -82,6 +87,64 @@ const initialState: AppState = {
       text: `This porfolio is made in React, specially above the version 16.8 what it means that Hooks are present. I
     specialized in React. However, I frequently use other libraries like Angular, Vue and svelte with SASS and
     alternating between Materialize and Tailwind.`,
+    },
+  ],
+  projects: [
+    {
+      id: 1,
+      title: 'Projecto 1',
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus nunc, faucibus ut purus eu,
+      porttitor euismod mi. Pellentesque aliquet est sapien, sed efficitur velit rutrum vitae. Nulla
+      facilisi. Cras sem ipsum, fermentum laoreet dignissim ac, rutrum a ipsum. In sed convallis leo.
+      Praesent egestas ultrices nibh, vitae molestie massa. Nulla volutpat vehicula nisi, faucibus tincidunt
+      nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
+      et, consectetur feugiat nibh.`,
+      src: 'https://github.com/Tonnraus/Light-Dark-Mode',
+      img: project1,
+      alt: 'Social Media Dashboard',
+      hot: false,
+    },
+    {
+      id: 2,
+      title: 'Chrommerce shop',
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus nunc, faucibus ut purus eu,
+      porttitor euismod mi. Pellentesque aliquet est sapien, sed efficitur velit rutrum vitae. Nulla
+      facilisi. Cras sem ipsum, fermentum laoreet dignissim ac, rutrum a ipsum. In sed convallis leo.
+      Praesent egestas ultrices nibh, vitae molestie massa. Nulla volutpat vehicula nisi, faucibus tincidunt
+      nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
+      et, consectetur feugiat nibh.`,
+      src: 'https://chrommerce-shop.web.app/',
+      img: noImageYet,
+      alt: 'Personal E-commerce shop',
+      hot: true,
+    },
+    {
+      id: 3,
+      title: 'Simon Said',
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus nunc, faucibus ut purus eu,
+      porttitor euismod mi. Pellentesque aliquet est sapien, sed efficitur velit rutrum vitae. Nulla
+      facilisi. Cras sem ipsum, fermentum laoreet dignissim ac, rutrum a ipsum. In sed convallis leo.
+      Praesent egestas ultrices nibh, vitae molestie massa. Nulla volutpat vehicula nisi, faucibus tincidunt
+      nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
+      et, consectetur feugiat nibh.`,
+      src: 'https://github.com/Tonnraus/Light-Dark-Mode',
+      img: project3,
+      alt: 'Simon said game',
+      hot: false,
+    },
+    {
+      id: 4,
+      title: 'Rick and Morty',
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus nunc, faucibus ut purus eu,
+      porttitor euismod mi. Pellentesque aliquet est sapien, sed efficitur velit rutrum vitae. Nulla
+      facilisi. Cras sem ipsum, fermentum laoreet dignissim ac, rutrum a ipsum. In sed convallis leo.
+      Praesent egestas ultrices nibh, vitae molestie massa. Nulla volutpat vehicula nisi, faucibus tincidunt
+      nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
+      et, consectetur feugiat nibh.`,
+      src: 'https://github.com/Tonnraus/Light-Dark-Mode',
+      img: project1,
+      alt: 'Rick and Morty webpage',
+      hot: false,
     },
   ],
 };

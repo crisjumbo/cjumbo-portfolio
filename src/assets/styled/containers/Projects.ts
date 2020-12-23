@@ -55,6 +55,7 @@ export const SCard = styled.div`
 width: 400px;
 height: 230px;
 margin-bottom:2.5rem;
+}
 @media ${device.tablet}{
   width:350px;
   margin-bottom: 2.5rem;
@@ -74,8 +75,11 @@ justify-content: center;
 align-items: center;
 color: black;
 cursor: pointer;
-
-`;
+${props => props.className === 'hot' && 
+`
+background:linear-gradient(#FFEA61, #FFDD3C);
+`}
+`
 export const  SCardBody = styled.div`
     width: 100%;
     height: 200px;

@@ -38,6 +38,15 @@ interface LogoObject {
   src?: string;
   delay?: string;
 }
+interface ProjectObject {
+  id: number;
+  title: string;
+  description: string;
+  src: string;
+  img: string;
+  alt: string;
+  hot: boolean;
+}
 export interface AppState {
   main?: MainObject;
   display?: DisplayObject;
@@ -46,6 +55,7 @@ export interface AppState {
   allMovements?: MovementObject[];
   allLogos?: LogoObject[];
   allTexts?: TextObject[];
+  projects?: ProjectObject[];
 }
 /*
 ██╗  ██╗ ██████╗  ██████╗ ██╗  ██╗███████╗
