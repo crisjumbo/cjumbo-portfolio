@@ -27,6 +27,7 @@ flex-direction: column;
 width: 100%;
 height: 100%;
 h2{
+  color: #CCD6DD;
   margin-bottom:1.5rem;
   @media ${device.tablet}{
     margin-bottom: 1.5rem;

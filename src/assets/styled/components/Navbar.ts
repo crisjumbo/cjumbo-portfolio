@@ -13,16 +13,29 @@ transition-timing-function: ease;
     height: 50px;
 }
 `
-export const StyledButton = styled.button`
+export const StyledButton = styled.a`
 height: 30px;
+color: whitesmoke;
 text-align: center;
 display: grid;
 align-items: center;
 width: 105px;
 border-radius: 5px;
-background: linear-gradient(#c4c8c9,#486268);
 font-size: 14px;
+border: none;
 cursor: pointer;
+${props => props.className === 'instagram' &&
+'background: #00ACED;'
+}
+${props => props.className === 'facebook' &&
+'background-color: #4168a4;'
+}
+${props => props.className === 'linkedin' && 
+'background-color: #0078b5;'
+}
+${props => props.className === 'github' &&
+'background-color: #333333;'
+}
 @media ${device.sixes}{
     height: 25px;
     width:85px;
@@ -50,7 +63,7 @@ border-radius: 50%;
 position: relative;
 overflow: hidden;
 transition: transform 2s;
-border: 1px solid black;
+top:5px;
 `;
 export const StyledHeader = styled.header`
 padding: 0 70px;

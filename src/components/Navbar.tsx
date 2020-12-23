@@ -24,10 +24,6 @@ import contactLogo from '../assets/statics/ContactLogo.png';
 import aboutLogo from '../assets/statics/AboutLogo.png';
 import brandLogo from '../assets/statics/logoChr.png';
 import { UseInitializeState } from 'types/app';
-// import logo6face from '../assets/statics/logo6face.png';
-// import logo6link from '../assets/statics/logo6link.png';
-// import logo6inst from '../assets/statics/logo6inst.png';
-// import logo6gith from '../assets/statics/logo6gith.png';
 //-- Component Navbar
 const Navbar: React.FC = () => {
   //-- Variables & Hooks
@@ -147,14 +143,21 @@ const Navbar: React.FC = () => {
         <StyledList>
           <li>
             <StyledButton
+              href="https://twitter.com/Ayton_que"
+              className="instagram"
               onMouseOver={() => handleDisplayBlock('instagram logo')}
               onMouseOut={() => handleDisplayNone()}
             >
-              Instagram
+              Twitter
             </StyledButton>
           </li>
           <li>
-            <StyledButton onMouseOver={() => handleDisplayBlock('github logo')} onMouseOut={() => handleDisplayNone()}>
+            <StyledButton
+              href="https://github.com/Tonnraus"
+              className="github"
+              onMouseOver={() => handleDisplayBlock('github logo')}
+              onMouseOut={() => handleDisplayNone()}
+            >
               GitHub
             </StyledButton>
           </li>
@@ -173,6 +176,8 @@ const Navbar: React.FC = () => {
         <StyledList>
           <li>
             <StyledButton
+              href="https://www.linkedin.com/in/cristofher-jumbo-jimenez-168203187/"
+              className="linkedin"
               onMouseOver={() => handleDisplayBlock('linkedin logo')}
               onMouseOut={() => handleDisplayNone()}
             >
@@ -181,6 +186,8 @@ const Navbar: React.FC = () => {
           </li>
           <li>
             <StyledButton
+              href="https://www.facebook.com/Cristofher.Jumbo"
+              className="facebook"
               onMouseOver={() => handleDisplayBlock('facebook logo')}
               onMouseOut={() => handleDisplayNone()}
             >

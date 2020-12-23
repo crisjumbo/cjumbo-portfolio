@@ -1,5 +1,11 @@
 import { AppState } from './types/app';
 /* State of the App Context */
+import brandLogo from './assets/statics/logoChr.png';
+import facebookLogo from './assets/statics/logo6face.png';
+import twitterLogo from './assets/statics/logo6twit.png';
+import githubLogo from './assets/statics/logo6gith.png';
+import linkedinLogo from './assets/statics/logo6link.png';
+
 const initialState: AppState = {
   main: {
     toLeft: false,
@@ -13,7 +19,7 @@ const initialState: AppState = {
   display: {
     id: 1,
     name: 'brand logo',
-    src: '../assets/statics/logoChr.png',
+    src: brandLogo,
     delay: '0s',
   },
   textShowed: {
@@ -34,11 +40,11 @@ const initialState: AppState = {
     { name: 'noMovement', toRight: false, toLeft: false },
   ],
   allLogos: [
-    { id: 1, name: 'brand logo', src: '../assets/statics/logoChr.png', delay: '0s' },
-    { id: 2, name: 'instagram logo', src: '../assets/statics/logo6inst.png', delay: '1s' },
-    { id: 3, name: 'github logo', src: '../assets/statics/logo6gith.png', delay: '1s' },
-    { id: 4, name: 'linkedin logo', src: '../assets/statics/logo6link.png', delay: '1s' },
-    { id: 5, name: 'facebook logo', src: '../assets/statics/logo6face.png', delay: '1s' },
+    { id: 1, name: 'brand logo', src: brandLogo, delay: '0s' },
+    { id: 2, name: 'instagram logo', src: twitterLogo, delay: '1s' },
+    { id: 3, name: 'github logo', src: githubLogo, delay: '1s' },
+    { id: 4, name: 'linkedin logo', src: linkedinLogo, delay: '1s' },
+    { id: 5, name: 'facebook logo', src: facebookLogo, delay: '1s' },
   ],
   allTexts: [
     {
