@@ -9,6 +9,7 @@ const size = {
     laptop: '1024px',
     laptopL: '1440px',
     desktop: '2560px', 
+    fives: '515px',
     nines: '900px',
     sixes: '630px',
   }
@@ -25,6 +26,7 @@ const size = {
     desktopL: `(max-width: ${size.desktop})`,
     nines: `(max-width: ${size.nines})`,
     sixes: `(max-width: ${size.sixes})`,
+    fives: `(max-width: ${size.fives})`,
   };
   
 export const StyledLayout = styled.div`

@@ -7,26 +7,32 @@
  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝   ╚═╝   
 */
 import styled from 'styled-components';
+import {device} from '../layouts/index';
 
 export const SMain = styled.div`
 background-color: #1b1720;
+width:100vw;
+max-width:100vw;
 color: #f3e8e8;
 align-items: center;
 text-align: center;
 flex-direction: column;
 display: flex;
 height:100%;
-padding-top: 30px;
+padding-top: 4rem;
 `;
 
 export const SFormBox = styled.form`
 background-color: transparent;
 display: flex;
 justify-content: space-between;
-width: 600px;
+width: 100vw;
+max-width:100vw;
 height: 235px;
 flex-direction: column;
 margin-top: 40px;
+padding-left: 2.5rem;
+padding-right:2.5rem;
 `;
 export const SUnderLine = styled.i`
 height: 3px;
@@ -39,10 +45,18 @@ background: linear-gradient(#8bddf2,#345e68);
 
 export const SNavBox = styled.div`
 width: 100%;
-height: 25px;
 background-color: transparent;
 display: flex;
 justify-content: space-between;
+flex-wrap:wrap;
+@media ${device.tablet}{
+    justify-content:center;
+    margin-bottom: 2rem;
+}
+@media ${device.mobileL}{
+    justify-content: center;
+    margin-bottom: 2rem;
+}
 `;
 
 export const STextarea = styled.textarea`
@@ -69,9 +83,13 @@ align-items: center;
 
 export const SInputBox = styled.div`
 width: 180px;
-height: 100%;
+height: 25px;
+margin-bottom: 10px;
 padding-bottom: 3px;
 position: relative;
+@media ${device.tablet}{
+    margin-right: 20px;
+}
 `;
 
 export const SInput = styled.input`
