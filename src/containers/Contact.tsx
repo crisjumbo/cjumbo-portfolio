@@ -42,14 +42,14 @@ const Contact: React.FC = () => {
   //-- Render of the component Contact
   return (
     <SMain>
-      <h2>Let&aposs keep in touch</h2>
+      <h2>{"Let's keep in touch"}</h2>
       <SFormBox onSubmit={handleSubmit}>
         <SNavBox>
           <SInputBox>
             <SInput name="name" type="text" onChange={handleChange} value={values.name} placeholder="name" />
             <SUnderLine />
           </SInputBox>
-          <SInputBox>
+          <SInputBox className="email">
             <SInput name="email" type="email" onChange={handleChange} value={values.email} placeholder="email" />
             <SUnderLine />
           </SInputBox>

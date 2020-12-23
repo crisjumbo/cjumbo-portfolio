@@ -34,6 +34,7 @@ display: grid;
 grid-template-rows: 195px 1fr 45px;
 height:100vh;
 max-width:100vw;
+background-color: #CCD6DD;
 @media ${device.nines}{
   grid-template-rows: 150px 1fr 40px;
 }

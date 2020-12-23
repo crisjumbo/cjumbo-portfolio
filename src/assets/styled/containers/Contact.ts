@@ -20,6 +20,9 @@ flex-direction: column;
 display: flex;
 height:100%;
 padding-top: 4rem;
+h2{
+   color: #CCD6DD;
+}
 `;
 
 export const SFormBox = styled.form`
@@ -31,8 +34,8 @@ max-width:100vw;
 height: 235px;
 flex-direction: column;
 margin-top: 40px;
-padding-left: 2.5rem;
-padding-right:2.5rem;
+padding-left: 13%;
+padding-right:13%;
 `;
 export const SUnderLine = styled.i`
 height: 3px;
