@@ -12,21 +12,10 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.dev.ts",
-    "build": "webpack --config ./webpack.prod.ts",
+    "build": "webpack --config ./webpack.prod.ts --mode production",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "tsc": "tsc --watch --noEmit"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint",
-      "pre-push": "npm run test:no-watch"
-    },
-    "lint-staged": {
-      "*.{js,ts,tsx}": [
-        "eslint --fix"
-      ]
-    }
   },
   "eslintConfig": {
     "extends": [
