@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
           </SInputBox>
         </SNavBox>
         <STextarea placeholder="Message..."></STextarea>
-        <SSubmit type="submit" />
+        <SSubmit type="submit">Send</SSubmit>
       </SFormBox>
     </SMain>
   );
