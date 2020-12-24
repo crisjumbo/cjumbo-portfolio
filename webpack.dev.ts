@@ -21,12 +21,7 @@ const config: webpack.Configuration = merge(common, {
     hot: true,
   },
   module: {
-    rules: [
-      {
-        test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
-    ],
+    rules: [],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

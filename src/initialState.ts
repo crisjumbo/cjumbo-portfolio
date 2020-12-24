@@ -128,7 +128,7 @@ const initialState: AppState = {
       nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
       et, consectetur feugiat nibh.`,
       src: 'https://github.com/Tonnraus/Light-Dark-Mode',
-      img: project3,
+      img: project2,
       alt: 'Simon said game',
       hot: false,
     },
@@ -142,7 +142,7 @@ const initialState: AppState = {
       nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
       et, consectetur feugiat nibh.`,
       src: 'https://github.com/Tonnraus/Light-Dark-Mode',
-      img: project1,
+      img: project3,
       alt: 'Rick and Morty webpage',
       hot: false,
     },

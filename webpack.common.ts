@@ -52,22 +52,7 @@ const config: webpack.Configuration = {
         files: './src/**/*',
       },
     }),
-    // new ImageminPlugin({
-    //   externalImages: {
-    //     context: ".",
-    //     sources: glob.sync("src/imgs/**.{png, jpg, gif, svg, jpeg}"),
-    //     destination: "dist/assets/",
-    //     fileName: "[name].[ext]",
-    //   },
-    // }),
   ],
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-      minSize: 0,
-      name: 'commons',
-    },
-  },
 };
 
 export default config;
