@@ -9,7 +9,7 @@
 import React from 'react';
 import { SMain, SWrapper, SImg, SLink } from '../assets/styled/containers/PreHome';
 // const personalLogo = require('../assets/statics/logoChr.png');
-import PersonalLogo from '../assets/statics/logoChr.png';
+// import PersonalLogo from '../assets/statics/logoChr.png';
 
 //-- PreHome Component
 const PreHome: React.FC = () => {
@@ -18,7 +18,7 @@ const PreHome: React.FC = () => {
     <SMain>
       <SWrapper>
         <SLink to="/projects">
-          <SImg src={PersonalLogo} alt="Personal Logo" />
+          <SImg src={''} alt="Personal Logo" />
         </SLink>
         <p>
           Helloª, I am Cristofher a web developer.

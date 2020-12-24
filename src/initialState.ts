@@ -6,10 +6,10 @@ import twitterLogo from './assets/statics/logo6twit.png';
 import githubLogo from './assets/statics/logo6gith.png';
 import linkedinLogo from './assets/statics/logo6link.png';
 // -- Project images
-import project1 from './assets/statics/project1.png';
-import project2 from './assets/statics/project2.png';
-import project3 from './assets/statics/project3.jpg';
-import noImageYet from './assets/statics/NoImageYet.png';
+// import project1 from './assets/statics/project1.png';
+// import project2 from './assets/statics/project2.png';
+// import project3 from './assets/statics/project3.jpg';
+// import noImageYet from './assets/statics/NoImageYet.png';
 
 const initialState: AppState = {
   main: {
@@ -100,7 +100,7 @@ const initialState: AppState = {
       nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
       et, consectetur feugiat nibh.`,
       src: 'https://github.com/Tonnraus/Light-Dark-Mode',
-      img: project1,
+      img: '',
       alt: 'Social Media Dashboard',
       hot: false,
     },
@@ -114,7 +114,7 @@ const initialState: AppState = {
       nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
       et, consectetur feugiat nibh.`,
       src: 'https://chrommerce-shop.web.app/',
-      img: noImageYet,
+      img: '',
       alt: 'Personal E-commerce shop',
       hot: true,
     },
@@ -128,7 +128,7 @@ const initialState: AppState = {
       nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
       et, consectetur feugiat nibh.`,
       src: 'https://github.com/Tonnraus/Light-Dark-Mode',
-      img: project2,
+      img: '',
       alt: 'Simon said game',
       hot: false,
     },
@@ -142,7 +142,7 @@ const initialState: AppState = {
       nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
       et, consectetur feugiat nibh.`,
       src: 'https://github.com/Tonnraus/Light-Dark-Mode',
-      img: project3,
+      img: '',
       alt: 'Rick and Morty webpage',
       hot: false,
     },

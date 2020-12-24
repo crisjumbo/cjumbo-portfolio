@@ -20,9 +20,9 @@ import {
 } from '../assets/styled/components/Navbar';
 
 // import logo6 from '../assets/statics/logoChr.png';
-import contactLogo from '../assets/statics/ContactLogo.png';
-import aboutLogo from '../assets/statics/AboutLogo.png';
-import brandLogo from '../assets/statics/logoChr.png';
+// import contactLogo from '../assets/statics/ContactLogo.png';
+// import aboutLogo from '../assets/statics/AboutLogo.png';
+// import brandLogo from '../assets/statics/logoChr.png';
 import { UseInitializeState } from 'types/app';
 //-- Component Navbar
 const Navbar: React.FC = () => {
@@ -198,18 +198,18 @@ const Navbar: React.FC = () => {
       </StyledNav>
       <SubNav>
         <Link to="/contact" onClick={(e) => handleToContact(e)}>
-          <Logo src={contactLogo} alt="contact logo button" />
+          <Logo src={''} alt="contact logo button" />
         </Link>
         {
           // Here loco when the screen reachs 900px
           width < 900 && (
             <Link to="/projects" onClick={(e) => handleToProjects(e)}>
-              <Logo src={brandLogo} alt="Brand Logo" />
+              <Logo src={''} alt="Brand Logo" />
             </Link>
           )
         }
         <Link to="/about" onClick={(e) => handleToAbout(e)}>
-          <Logo src={aboutLogo} alt="about logo button" />
+          <Logo src={''} alt="about logo button" />
         </Link>
       </SubNav>
     </StyledHeader>
