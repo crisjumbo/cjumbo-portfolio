@@ -18,12 +18,17 @@ const config: webpack.Configuration = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+          },
         },
       },
       {
         test: /\.(tsx|ts)?$/,
         loader: 'ts-loader',
-        options: { allowTsInNodeModules: true },
+        options: {
+          allowTsInNodeModules: true,
+        },
         exclude: /node_modules/,
       },
       {

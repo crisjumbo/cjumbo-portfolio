@@ -13,7 +13,17 @@ module.exports = merge(common, {
     publicPath: '/',
   },
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: {
+          loader: 'file-loader',
+          options: {
+            outputPath: 'assets/',
+          },
+        },
+      },
+    ],
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin({

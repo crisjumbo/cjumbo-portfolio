@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
   //-- Render of the component Contact
   return (
     <SMain>
-      <h2>{'Let\'s keep in touch'}</h2>
+      <h2>{'Lets keep in touch'}</h2>
       <SFormBox onSubmit={handleSubmit}>
         <SNavBox>
           <SInputBox>
