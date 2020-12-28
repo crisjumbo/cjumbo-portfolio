@@ -24,7 +24,7 @@ const initialState: AppState = {
   display: {
     id: 1,
     name: 'brand logo',
-    src: '',
+    src: 'https://i.ibb.co/1ZhmVH5/icon.png',
     delay: '0s',
   },
   textShowed: {
@@ -45,11 +45,11 @@ const initialState: AppState = {
     { name: 'noMovement', toRight: false, toLeft: false },
   ],
   allLogos: [
-    { id: 1, name: 'brand logo', src: '', delay: '0s' },
-    { id: 2, name: 'instagram logo', src: '', delay: '1s' },
-    { id: 3, name: 'github logo', src: '', delay: '1s' },
-    { id: 4, name: 'linkedin logo', src: '', delay: '1s' },
-    { id: 5, name: 'facebook logo', src: '', delay: '1s' },
+    { id: 1, name: 'brand logo', src: 'https://i.ibb.co/1ZhmVH5/icon.png', delay: '0s' },
+    { id: 2, name: 'instagram logo', src: 'https://i.ibb.co/f05DKzL/logo6twit.png', delay: '1s' },
+    { id: 3, name: 'github logo', src: 'https://i.ibb.co/3sdcK17/logo6gith.png', delay: '1s' },
+    { id: 4, name: 'linkedin logo', src: 'https://i.ibb.co/GHGwtp4/logo6link.png', delay: '1s' },
+    { id: 5, name: 'facebook logo', src: 'https://i.ibb.co/6XHFnzY/logo6face.png', delay: '1s' },
   ],
   allTexts: [
     {
@@ -100,7 +100,7 @@ const initialState: AppState = {
       nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
       et, consectetur feugiat nibh.`,
       src: 'https://github.com/Tonnraus/Light-Dark-Mode',
-      img: '',
+      img: 'https://i.ibb.co/x8GLDys/dashboarddarklight.png',
       alt: 'Social Media Dashboard',
       hot: false,
     },
@@ -114,7 +114,7 @@ const initialState: AppState = {
       nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
       et, consectetur feugiat nibh.`,
       src: 'https://chrommerce-shop.web.app/',
-      img: '',
+      img: 'https://i.ibb.co/cDMhmzk/No-Image-Yet.png',
       alt: 'Personal E-commerce shop',
       hot: true,
     },
@@ -128,7 +128,7 @@ const initialState: AppState = {
       nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
       et, consectetur feugiat nibh.`,
       src: 'https://github.com/Tonnraus/Light-Dark-Mode',
-      img: '',
+      img: 'https://i.ibb.co/82pb0yG/Simon-Says.png',
       alt: 'Simon said game',
       hot: false,
     },
@@ -142,7 +142,7 @@ const initialState: AppState = {
       nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
       et, consectetur feugiat nibh.`,
       src: 'https://github.com/Tonnraus/Light-Dark-Mode',
-      img: '',
+      img: 'https://i.ibb.co/4gNpb4Y/Rickand-Morty-Web.jpg',
       alt: 'Rick and Morty webpage',
       hot: false,
     },

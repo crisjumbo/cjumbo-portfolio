@@ -18,7 +18,7 @@ const PreHome: React.FC = () => {
     <SMain>
       <SWrapper>
         <SLink to="/projects">
-          <SImg src={''} alt="Personal Logo" />
+          <SImg src={'https://i.ibb.co/1ZhmVH5/icon.png'} alt="Personal Logo" />
         </SLink>
         <p>
           Helloª, I am Cristofher a web developer.

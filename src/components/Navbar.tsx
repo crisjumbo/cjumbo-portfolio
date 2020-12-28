@@ -198,18 +198,18 @@ const Navbar: React.FC = () => {
       </StyledNav>
       <SubNav>
         <Link to="/contact" onClick={(e) => handleToContact(e)}>
-          <Logo src={''} alt="contact logo button" />
+          <Logo src="https://i.ibb.co/BGkpqXm/Contact-Logo.png" alt="contact logo button" />
         </Link>
         {
           // Here loco when the screen reachs 900px
           width < 900 && (
             <Link to="/projects" onClick={(e) => handleToProjects(e)}>
-              <Logo src={''} alt="Brand Logo" />
+              <Logo src="https://i.ibb.co/1ZhmVH5/icon.png" alt="Brand Logo" />
             </Link>
           )
         }
         <Link to="/about" onClick={(e) => handleToAbout(e)}>
-          <Logo src={''} alt="about logo button" />
+          <Logo src="https://i.ibb.co/x67nXPX/About-Logo.png" alt="about logo button" />
         </Link>
       </SubNav>
     </StyledHeader>
