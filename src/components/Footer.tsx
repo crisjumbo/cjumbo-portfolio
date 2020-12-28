@@ -7,7 +7,7 @@
 ╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
 */
 import React from 'react';
-import { StyledFooter } from '../assets/styled/components/Footer';
+import { StyledFooter } from '../styled/components/Footer';
 
 //-- Component Footer
 const Footer: React.FC = () => (

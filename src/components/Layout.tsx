@@ -7,7 +7,7 @@
 ╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝  ╚═════╝    ╚═╝   
 */
 import React from 'react';
-import { StyledLayout } from '../assets/styled/layouts';
+import { StyledLayout } from '../styled/layouts';
 import Navbar from './Navbar';
 import Footer from './Footer';
 //-- Component Layout

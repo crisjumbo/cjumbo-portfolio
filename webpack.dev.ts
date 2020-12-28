@@ -28,7 +28,6 @@ const config: webpack.Configuration = merge(common, {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: './index.html',
-      favicon: './src/assets/statics/logoChr.png',
     }),
   ],
 });

@@ -10,7 +10,7 @@ import React, { useContext, useState } from 'react';
 //-- Hooks
 import AppContext from '../context/AppContext';
 //-- Components
-import { SMain, SSection, SButton, STextCard } from '../assets/styled/containers/About';
+import { SMain, SSection, SButton, STextCard } from '../styled/containers/About';
 import { UseInitializeState, WeightObject } from 'types/app';
 
 //-- Component About

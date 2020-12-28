@@ -11,7 +11,7 @@ import React, { useEffect, useContext, useState } from 'react';
 import AppContext from '../context/AppContext';
 import { useLocation } from 'react-router-dom';
 //-- Components & Types
-import { SSuperMain } from '../assets/styled/containers/SuperMain';
+import { SSuperMain } from '../styled/containers/SuperMain';
 import Projects from './Projects';
 import Contact from './Contact';
 import About from './About';

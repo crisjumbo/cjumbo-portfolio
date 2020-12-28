@@ -17,7 +17,7 @@ import {
   StyledList,
   LogoContainer,
   StyledButton,
-} from '../assets/styled/components/Navbar';
+} from '../styled/components/Navbar';
 
 // import logo6 from '../assets/statics/logoChr.png';
 // import contactLogo from '../assets/statics/ContactLogo.png';

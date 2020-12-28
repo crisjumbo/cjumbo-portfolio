@@ -16,7 +16,7 @@ import {
   SInputBox,
   SInput,
   SUnderLine,
-} from '../assets/styled/containers/Contact';
+} from '../styled/containers/Contact';
 
 //-- Component Contact
 const Contact: React.FC = () => {

@@ -18,17 +18,25 @@ import {
   CardBodyFront,
   CardBodyBack,
   CardBodyImg,
-} from '../assets/styled/containers/Projects';
+} from '../styled/containers/Projects';
 import { UseInitializeState } from 'types/app';
-
-// import togologo from '../assets/statics/togologo.png';
 
 //-- Component Home
 const Projects: React.FC = () => {
   const { state } = useContext<UseInitializeState>(AppContext);
+  // -- handlers & functions
+  const handleScroll = (e: React.UIEvent<HTMLElement>) => {
+    // e.stopPropagation(); // Handy if you want to prevent event bubbling to scrollable parent
+    console.log({
+      event: e,
+      target: e.target, // Note 1* scrollTop is undefined on e.target
+      currentTarget: e.currentTarget,
+      scrollTop: e.currentTarget.scrollTop,
+    });
+  };
   //-- Render of the component Home
   return (
-    <SMain>
+    <SMain onScroll={handleScroll}>
       <h2>Projects</h2>
       <SSection>
         {state?.projects
