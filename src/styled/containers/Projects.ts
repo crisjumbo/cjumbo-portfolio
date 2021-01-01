@@ -57,7 +57,7 @@ height: 230px;
 margin-bottom:2.5rem;
 }
 @media ${device.tablet}{
-  width:350px;
+  width:350px; 
   margin-bottom: 2.5rem;
 }
 `;

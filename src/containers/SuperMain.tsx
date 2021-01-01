@@ -26,15 +26,6 @@ const SuperMain: React.FC = () => {
   const { pathname } = useLocation();
   const [style, setStyle] = useState(setOrder(pathname));
   // play with the fucking transition because that is what is killing you
-
-  /*
-██╗███╗   ██╗███████╗██╗███╗   ██╗██╗████████╗███████╗    ██╗      ██████╗  ██████╗ ██████╗ 
-██║████╗  ██║██╔════╝██║████╗  ██║██║╚══██╔══╝██╔════╝    ██║     ██╔═══██╗██╔═══██╗██╔══██╗
-██║██╔██╗ ██║█████╗  ██║██╔██╗ ██║██║   ██║   █████╗      ██║     ██║   ██║██║   ██║██████╔╝
-██║██║╚██╗██║██╔══╝  ██║██║╚██╗██║██║   ██║   ██╔══╝      ██║     ██║   ██║██║   ██║██╔═══╝ 
-██║██║ ╚████║██║     ██║██║ ╚████║██║   ██║   ███████╗    ███████╗╚██████╔╝╚██████╔╝██║     
-╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚══════╝    ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝     
-*/
   const slideTo = () => {
     if (!main?.toLeft && !main?.toRight) {
       return undefined;
@@ -64,7 +55,7 @@ const SuperMain: React.FC = () => {
     <SSuperMain>
       <div className="super-container" style={slideTo()}>
         <div
-          className="div_container"
+          className="div_container projects"
           style={{
             transform: `translateX(${style.projectsPosition})`,
           }}

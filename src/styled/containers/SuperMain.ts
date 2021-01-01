@@ -16,4 +16,7 @@ export const SSuperMain = styled.main`
     height: 100%;
     top: 0;
   }
+  .projects {
+    overflow-y: scroll;
+  }
 `;
