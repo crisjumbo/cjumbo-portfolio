@@ -1,15 +1,5 @@
 import { AppState } from './types/app';
 /* State of the App Context */
-// import brandLogo from './assets/statics/logoChr.png';
-// import facebookLogo from './assets/statics/logo6face.png';
-// import twitterLogo from './assets/statics/logo6twit.png';
-// import githubLogo from './assets/statics/logo6gith.png';
-// import linkedinLogo from './assets/statics/logo6link.png';
-// -- Project images
-// import project1 from './assets/statics/project1.png';
-// import project2 from './assets/statics/project2.png';
-// import project3 from './assets/statics/project3.jpg';
-// import noImageYet from './assets/statics/NoImageYet.png';
 
 const initialState: AppState = {
   main: {
@@ -92,13 +82,10 @@ const initialState: AppState = {
   projects: [
     {
       id: 1,
-      title: 'Projecto 1',
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus nunc, faucibus ut purus eu,
-      porttitor euismod mi. Pellentesque aliquet est sapien, sed efficitur velit rutrum vitae. Nulla
-      facilisi. Cras sem ipsum, fermentum laoreet dignissim ac, rutrum a ipsum. In sed convallis leo.
-      Praesent egestas ultrices nibh, vitae molestie massa. Nulla volutpat vehicula nisi, faucibus tincidunt
-      nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
-      et, consectetur feugiat nibh.`,
+      title: 'Social Media Dashboard',
+      description: `Single page with both dark and light themes. One of my first projects so thats why they are
+      made in Javascript, styles in css and of course html.
+      The main goal is to build a simple webpage that can contain different themes.`,
       src: 'https://github.com/Tonnraus/Light-Dark-Mode',
       img: 'https://i.ibb.co/x8GLDys/dashboarddarklight.png',
       alt: 'Social Media Dashboard',
@@ -107,12 +94,10 @@ const initialState: AppState = {
     {
       id: 2,
       title: 'Chrommerce shop',
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus nunc, faucibus ut purus eu,
-      porttitor euismod mi. Pellentesque aliquet est sapien, sed efficitur velit rutrum vitae. Nulla
-      facilisi. Cras sem ipsum, fermentum laoreet dignissim ac, rutrum a ipsum. In sed convallis leo.
-      Praesent egestas ultrices nibh, vitae molestie massa. Nulla volutpat vehicula nisi, faucibus tincidunt
-      nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
-      et, consectetur feugiat nibh.`,
+      description: `Online shope where users can select different items, send them to a checkout list and finally 
+      purchase with Paypal. As a final detail a map will show with the geolocation the package will arrive.
+      The project is made by react, styles-components(css in line), Strapi as Api Rest. Also the website counts on
+      a PWA display for mobile users. `,
       src: 'https://chrommerce-shop.web.app/',
       img: 'https://i.ibb.co/cDMhmzk/No-Image-Yet.png',
       alt: 'Personal E-commerce shop',
@@ -121,12 +106,8 @@ const initialState: AppState = {
     {
       id: 3,
       title: 'Simon Said',
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus nunc, faucibus ut purus eu,
-      porttitor euismod mi. Pellentesque aliquet est sapien, sed efficitur velit rutrum vitae. Nulla
-      facilisi. Cras sem ipsum, fermentum laoreet dignissim ac, rutrum a ipsum. In sed convallis leo.
-      Praesent egestas ultrices nibh, vitae molestie massa. Nulla volutpat vehicula nisi, faucibus tincidunt
-      nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
-      et, consectetur feugiat nibh.`,
+      description: `Famous Game but brought into the website, it has some addons like level, max-level and current level.
+      The main project is made in Platzi course but I added some feature, everything made in Javascript orientated to objects.`,
       src: 'https://github.com/Tonnraus/Light-Dark-Mode',
       img: 'https://i.ibb.co/82pb0yG/Simon-Says.png',
       alt: 'Simon said game',
@@ -135,15 +116,42 @@ const initialState: AppState = {
     {
       id: 4,
       title: 'Rick and Morty',
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus nunc, faucibus ut purus eu,
-      porttitor euismod mi. Pellentesque aliquet est sapien, sed efficitur velit rutrum vitae. Nulla
-      facilisi. Cras sem ipsum, fermentum laoreet dignissim ac, rutrum a ipsum. In sed convallis leo.
-      Praesent egestas ultrices nibh, vitae molestie massa. Nulla volutpat vehicula nisi, faucibus tincidunt
-      nulla suscipit eu. Duis vel dapibus nisl, id hendrerit nisi. Nulla mauris risus, pretium vitae sapien
-      et, consectetur feugiat nibh.`,
+      description: `The famous serie website. It works together a free API, the main purpose was to practice
+      API requests and its structure. Respect technologies it is made in pure Javascript with the power of sass.`,
       src: 'https://github.com/Tonnraus/Light-Dark-Mode',
       img: 'https://i.ibb.co/4gNpb4Y/Rickand-Morty-Web.jpg',
       alt: 'Rick and Morty webpage',
+      hot: false,
+    },
+    {
+      id: 5,
+      title: 'Platzi Video v01',
+      description: `Project build in the Platzi platform course, the main goal is to use css or sass to create a layout
+      where our "Platzi videos " platform will be host.`,
+      src: 'https://tonnraus.github.io/Platzi-Videos/',
+      img: 'https://i.ibb.co/VMhpYYb/Platzi-Videos01.png',
+      alt: 'Platzi Video version one',
+      hot: false,
+    },
+    {
+      id: 6,
+      title: 'Platzi Video v02',
+      description: `Project built in Platzi platform course, the main goal is to call API and print the response filtering by 
+      categories of movies, after the client can choose a movie or look for a specific one in the input.`,
+      src: 'https://tonnraus.github.io/PlatziVideo-02/',
+      img: 'https://i.ibb.co/BCHfFSn/Platzi-Video02.png',
+      alt: 'Platzi Video version two',
+      hot: false,
+    },
+    {
+      id: 7,
+      title: 'Platzi Video v02',
+      description: `Updated version of last platform video, now we are employing React, sass styles, Redux, Routes and complex
+      functional components with custom hooks. The main goal is to offer a list of videos which can be added or removed from a personal
+      list. Also, there is a login/register page (if you log in it will display your gravatar picture)`,
+      src: 'https://platzi-video-03.web.app/',
+      img: 'https://i.ibb.co/p0yD1Yf/Platzi-Video-03.png',
+      alt: 'Platzi Video version two',
       hot: false,
     },
   ],
