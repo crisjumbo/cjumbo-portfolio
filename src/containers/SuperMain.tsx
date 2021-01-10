@@ -8,6 +8,7 @@
 */
 //-- Dependencies
 import React, { useEffect, useContext, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import AppContext from '../context/AppContext';
 import { useLocation } from 'react-router-dom';
 //-- Components & Types
@@ -52,34 +53,39 @@ const SuperMain: React.FC = () => {
   }, [pathname]);
   // -- Component Render
   return (
-    <SSuperMain>
-      <div className="super-container" style={slideTo()}>
-        <div
-          className="div_container projects"
-          style={{
-            transform: `translateX(${style.projectsPosition})`,
-          }}
-        >
-          <Projects />
+    <>
+      <Helmet>
+        <title>Chr.jimenez | Home</title>
+      </Helmet>
+      <SSuperMain>
+        <div className="super-container" style={slideTo()}>
+          <div
+            className="div_container projects"
+            style={{
+              transform: `translateX(${style.projectsPosition})`,
+            }}
+          >
+            <Projects />
+          </div>
+          <div
+            className="div_container"
+            style={{
+              transform: `translateX(${style.contactPosition})`,
+            }}
+          >
+            <Contact />
+          </div>
+          <div
+            className="div_container"
+            style={{
+              transform: `translateX(${style.aboutPosition})`,
+            }}
+          >
+            <About />
+          </div>
         </div>
-        <div
-          className="div_container"
-          style={{
-            transform: `translateX(${style.contactPosition})`,
-          }}
-        >
-          <Contact />
-        </div>
-        <div
-          className="div_container"
-          style={{
-            transform: `translateX(${style.aboutPosition})`,
-          }}
-        >
-          <About />
-        </div>
-      </div>
-    </SSuperMain>
+      </SSuperMain>
+    </>
   );
 };
 

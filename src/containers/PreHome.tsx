@@ -17,7 +17,7 @@ const PreHome: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Chr.Jimenez - Home</title>
+        <title>Chr.jimenez</title>
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@Ayton_que" />
@@ -32,7 +32,7 @@ const PreHome: React.FC = () => {
         <meta property="og:site_name" content="Chr jimenez" />
         <meta property="og:locale" content="es_ES" />
         <meta property="og:type" content="article" />
-        <meta property="fb:app_id" content={FB_ID} />
+        <meta property="fb:app_id" content={FB_I} />
       </Helmet>
       <SMain>
         <SWrapper>
