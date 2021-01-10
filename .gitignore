@@ -106,9 +106,6 @@ dist/
 # Web P
 *.webp
 
-# Portable Network Graphics
-*.png
-
 # Animated Portable Network Graphics
 *.apng
 
@@ -132,9 +129,6 @@ dist/
 # BMP
 *.bmp
 *.dib
-
-# ICO
-*.ico
 
 # 3D Images
 *.3dm
