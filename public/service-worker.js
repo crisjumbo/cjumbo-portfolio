@@ -1,6 +1,6 @@
 const doCache = false;
 const CACHE_NAME = 'pwa-cache';
-​
+
 self.addEventListener('activate', event => {
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
@@ -15,12 +15,12 @@ self.addEventListener('activate', event => {
       )
   );
 });
-​
-self.addEventListener('install', function (event) {
+
+self.addEventListener('install', (event) => {
   if (doCache) {
     event.waitUntil(
       caches.open(CACHE_NAME)
-        .then(function (cache) {
+        .then((cache) => {
           fetch('manifest.json')
             .then(response => {
               response.json()
@@ -37,11 +37,11 @@ self.addEventListener('install', function (event) {
     );
   }
 });
-​
-self.addEventListener('fetch', function (event) {
+
+self.addEventListener('fetch', (event) => {
   if (doCache) {
     event.respondWith(
-      caches.match(event.request).then(function (response) {
+      caches.match(event.request).then((response) => {
         return response || fetch(event.request);
       })
     );
