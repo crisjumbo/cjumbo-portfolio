@@ -10,7 +10,7 @@ module.exports = merge(common, {
   mode: 'production',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'js/[name].[hash].js',
+    filename: 'js/[name].[fullhash].js',
     publicPath: '/',
   },
   module: {
