@@ -20,6 +20,7 @@ jobs:
         with:
           name: dist
           path: dist
+        env: ID_APP_FACEBOOK:${{secrets.ID_APP_FACEBOOk}}
   deploy:
     name: Deploy
     needs: build

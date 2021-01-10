@@ -1,5 +1,5 @@
 # Node template
-
+.env
 # Logs
 logs
 *.log
