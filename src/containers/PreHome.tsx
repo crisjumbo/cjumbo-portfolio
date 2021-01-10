@@ -32,7 +32,7 @@ const PreHome: React.FC = () => {
         <meta property="og:site_name" content="Chr jimenez" />
         <meta property="og:locale" content="es_ES" />
         <meta property="og:type" content="article" />
-        <meta property="fb:app_id" content={FB_I} />
+        <meta property="fb:app_id" content={FB_ID} />
       </Helmet>
       <SMain>
         <SWrapper>

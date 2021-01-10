@@ -4,6 +4,7 @@ import common from './webpack.common';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 
 module.exports = merge(common, {
   mode: 'production',
@@ -30,6 +31,13 @@ module.exports = merge(common, {
         collapseWhitespace: true,
         removeComments: true,
       },
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'public/manifest.json', to: '' },
+        { from: 'public/service-worker.js', to: '' },
+        { from: 'public/icon.png', to: 'assets' },
+      ],
     }),
   ],
 });
