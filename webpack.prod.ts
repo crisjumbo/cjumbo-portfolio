@@ -36,7 +36,7 @@ module.exports = merge(common, {
       patterns: [
         { from: 'public/manifest.json', to: '' },
         { from: 'public/service-worker.js', to: '' },
-        { from: './public/icon.png', to: 'assets' },
+        { from: 'public/assets/icon.png', to: 'assets' },
       ],
     }),
   ],
