@@ -154,6 +154,17 @@ const initialState: AppState = {
       alt: 'Platzi Video version two',
       hot: false,
     },
+    {
+      id: 8,
+      title: 'Memories Project',
+      description: `Website to save memories, It also accepts likes, edition or delete actions. In this project I used MongoBD Atlas as
+      data base, Express as server and finally React with Typescript as the frontend together with Material UI. Final product is deployed 
+      with Heroku and Netlify.`,
+      src: 'https://memorias.netlify.app/',
+      img: 'https://i.ibb.co/3cQVxYs/Memories-project.png',
+      alt: 'Memories project',
+      hot: true,
+    },
   ],
 };
 
