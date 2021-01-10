@@ -9,8 +9,8 @@
 import React from 'react';
 import { SMain, SWrapper, SImg, SLink } from '../styled/containers/PreHome';
 import { Helmet } from 'react-helmet';
+const FB_ID: string | undefined = 'needs be set in the backend';
 
-const FB_ID: string | undefined = process.env.ID_APP_FACEBOOK;
 //-- PreHome Component
 const PreHome: React.FC = () => {
   //-- Render of the component
