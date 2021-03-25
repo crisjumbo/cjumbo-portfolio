@@ -1,56 +1,81 @@
-# Cristofher Jumbo Jimenez Portfolio
+# Cristofher Jumbo jimenez (Aybike) 👽
 
-Welcome to my Portfolio repository, I hope you enjoyed the App experience. Here you will find how I do work, structure my projects.
-I am sure you will find a lot of inspiration in this soup of code :sweat_smile: .
-If you see any issue or bad practice, please let me know through a message or a pull-request ! Thank you :rocket: :rocket: :rocket: .
+Welcome to my portfolio's README file. I am a MERN stack developer who started a repository collection with this my own website. I am adding features in My free time. Also I test new languages and techniques here. So you are very welcome to take a look at the code.
 
-[image of the project desktop](link to picture inside ./.read-me-images)
-[image of the project tablet](link to picture inside ./.read-me-images)
-[image of the project phone](link to picture inside ./.read-me-images)
+## Status
+---
 
-## Principles
+Depoyed [Status here] Here is the link: https://chr-jimenez.com/
 
-#### Setup
+## Getting Started 🛸
 
-How do I code?
-Beforehand I do make a dynamic no-code mockup, after a deep analysis a design and algorithm is created. Based on that,
-I organize the repository's project structure: folders, pages, bundlers, linters, testing tools, Readme are created.
-Following the algorithm created, a backlog is created and tasks are assign to a schedule. In notepad these resolutions will
-keep saved, available for others. "Just ask me :)". Also, the issues that will be presenting at the time of making the task are saved in Notepad also.
+---
 
-#### Best Practices
+> Survivor Kit
 
-About linters, I use Typescript mainly for a better debug code. Husky, Eslint & Prettier for code structure. Also, comments are
-important: when a component is created a short description must be made, the process must be mark by comments. The relations within the
-tree components is stablish in a diagram.
+| Technology | Documentation                                      |
+| ---------- | -------------------------------------------------- |
+| Node       | https://www.npmjs.com/get-npm                      |
+| Yarn       | https://legacy.yarnpkg.com/lang/en/docs/install/   |
+| Prettier   | https://prettier.io/docs/en/install.html           |
+| Eslint     | https://eslint.org/docs/user-guide/getting-started |
 
-## Technologies
+---
 
-#### Main Tools & Languages
+> Installation
 
-Main Language: " Javascript with Typescript ",
-Main Style: " Styled Components Library ",
-Test: " Jest ",
-Bundler: " Webpack ",
-Deploy: " Firebase & Github Actions "
+```sh
+$ yarn install
+```
 
-#### Packages & Loaders
+---
 
-Here all packages installed and a short short description, one line please.
+> Local
 
-## Backlog
+```sh
+$ yarn dev
+```
 
-Here all the main task the App is compose of, Issues presented during this process will be point out, noted and all kind of information used to slove them will be in Notion.
+---
 
-- Transition between pages
-- Media queries
+> Deploy
 
-#### Issues
+```
+$ yarn start
+$ yarn build
+```
 
-1. I want to thanks @alejozepol in Github for helping me out with an issue in a moment when I was developing the App. :)
+---
 
-## Contact
+> Testing
 
-A product designed and made by chr
-[logo personal](link to my personal logo)
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```sh
+$ yarn test
+```
+
+## Issues 🐙
+
+---
+
+> Errors
+
+> Bugs
+
+> FAQ
+
+## Versioning
+
+---
+
+Node v14.15.1
+
+Yarn v1.22.10.
+
+Cristofher v0.1.35 -> v0.2.3 soon...
+
+## Authors 👾
+
+---
+
+[Antonio Jimenez](https://github.com/Tonnraus) |
+
