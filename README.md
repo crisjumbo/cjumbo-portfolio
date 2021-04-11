@@ -5,7 +5,7 @@ Welcome to my portfolio's README file. I am a MERN stack developer who started a
 ## Status
 ---
 
-Depoyed [Status here] Here is the link: https://chr-jimenez.com/
+**Frontend** with Firebase: [Chr-jimenez](https://chr-jimenez.com/)
 
 ## Getting Started 🛸
 
