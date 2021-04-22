@@ -83,12 +83,9 @@
   },
   "description": "Welcome to my Portfolio repository, I hope you enjoyed the App experience. Here you will find how I do work, structure my projects. I am sure you will find a lot of inspiration in this soup of code :sweat_smile: .  If you see any issue or bad practice, please let me know through a message or a pull-request ! Thank you :rocket: :rocket: :rocket: .",
   "main": ".eslintrc.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Tonnraus/Cristopher.git"
-  },
+  "repository": "git+https://github.com/Tonnraus/Cristopher.git",
   "keywords": [],
-  "author": "",
+  "author": "aybike <tonn.raus09@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Tonnraus/Cristopher/issues"
