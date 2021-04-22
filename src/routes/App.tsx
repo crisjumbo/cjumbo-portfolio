@@ -12,9 +12,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //-- Components
 import GlobalStyles from '../globalStyles';
 import Layout from '../components/Layout';
-import PreHome from '../containers/PreHome';
-import SuperMain from '../containers/SuperMain';
-import Error404 from '../containers/NotFound';
+import PreHome from '../pages/PreHome';
+import SuperMain from '../pages/SuperMain';
+import Error404 from '../pages/NotFound';
 //-- Hooks
 import AppContext from '../context/AppContext';
 import useInitializeState from '../hooks/useInitializeState';
