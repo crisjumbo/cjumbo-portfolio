@@ -17,11 +17,12 @@ const PreHome: React.FC = () => {
     <>
       <Helmet>
         <title>Chr.jimenez</title>
+        <meta property="og:image" content="https://i.ibb.co/1ZhmVH5/icon.png" />
       </Helmet>
       <SMain>
         <SWrapper>
           <SLink to="/projects">
-            <SImg src={'https://i.ibb.co/1ZhmVH5/icon.png'} alt="Personal Logo" />
+            <SImg src="https://i.ibb.co/1ZhmVH5/icon.png" alt="Personal Logo" />
           </SLink>
           <p>
             Helloª, I am Cristofher a web developer.

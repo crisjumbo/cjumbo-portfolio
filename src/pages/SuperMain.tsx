@@ -56,6 +56,7 @@ const SuperMain: React.FC = () => {
     <>
       <Helmet>
         <title>Chr.jimenez | Home</title>
+        <meta property="og:image" content="https://i.ibb.co/1ZhmVH5/icon.png" />
       </Helmet>
       <SSuperMain>
         <div className="super-container" style={slideTo()}>
