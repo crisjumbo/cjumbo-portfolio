@@ -27,9 +27,8 @@ import { UseInitializeState } from 'types/app';
 //-- Component Navbar
 const Navbar: React.FC = () => {
   //-- Variables & Hooks
-  const { state, displayBlock, displayNone, slideToLeft, slideToRight, noSlide } = useContext<UseInitializeState>(
-    AppContext,
-  );
+  const { state, displayBlock, displayNone, slideToLeft, slideToRight, noSlide } =
+    useContext<UseInitializeState>(AppContext);
   const display = state?.display;
   const { pathname } = useLocation();
   const history = useHistory();
