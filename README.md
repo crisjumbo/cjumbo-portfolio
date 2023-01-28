@@ -1,11 +1,11 @@
 # Cristofher Jumbo jimenez 👽
 
-Welcome to my portfolio's README file. I am a MERN stack developer who started a repository collection with this my own website. I am adding features in My free time. Also I test new languages and techniques here. So you are very welcome to take a look at the code.
+Welcome to my portfolio's README file. I am a MERN stack developer and passionate about technologies.
 
 ## Status
 ---
 
-**Frontend** with Firebase: [Chr-jimenez](https://chr-jimenez.com/)
+**Frontend** with Firebase: [cjumbo.me](https://cjumbo.me/)
 
 ## Getting Started 🛸
 
@@ -53,16 +53,6 @@ $ yarn build
 $ yarn test
 ```
 
-## Issues 🐙
-
----
-
-> Errors
-
-> Bugs
-
-> FAQ
-
 ## Versioning
 
 ---
@@ -73,9 +63,9 @@ Yarn v1.22.10.
 
 Cristofher v0.1.35 -> v0.2.3 soon...
 
-## Authors 👾
+## Author 👾
 
 ---
 
-[Antonio Jimenez](https://github.com/Tonnraus) |
+[Antonio Jimenez](https://github.com/Tonnraus)
 
