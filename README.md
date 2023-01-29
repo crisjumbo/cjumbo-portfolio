@@ -1,4 +1,4 @@
-# Cristofher Jumbo jimenez 👽
+# Cris Jumbo 👽
 
 Welcome to my portfolio's README file. I am a MERN stack developer and passionate about technologies.
 
@@ -67,5 +67,5 @@ Cristofher v0.1.35 -> v0.2.3 soon...
 
 ---
 
-[Antonio Jimenez](https://github.com/Tonnraus)
+[Cris Jumbo](https://github.com/Tonnraus)
 
