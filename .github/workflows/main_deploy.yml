@@ -18,7 +18,7 @@ jobs:
     - name: Install Packages
       run: npm install
     - name: Build Project
-      run: npm build
+      run: npm run build
     - name: Deploy
       run: |
         git config --global user.name $user_name
