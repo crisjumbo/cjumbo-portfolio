@@ -2,7 +2,6 @@ const UnderConstructionPage = () => {
     
     const LINKEDIN_PROFILE = "https://www.linkedin.com/in/crisjumbo/";
     const GITHUB_PROFILE = "https://github.com/srcristofher";
-    const WEB_LINK = "https://cjumbo.me";
 
     return(
         <div className="bg-main-blue w-screen h-screen flex justify-center items-center">
