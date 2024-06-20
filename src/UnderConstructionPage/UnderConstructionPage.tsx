@@ -1,3 +1,5 @@
+import {Button} from 'crisjumbo-component';
+
 const UnderConstructionPage = () => {
     
     const LINKEDIN_PROFILE = "https://www.linkedin.com/in/crisjumbo/";
@@ -12,7 +14,7 @@ const UnderConstructionPage = () => {
                 </div>
                 <div className="flex">
                     <form action={LINKEDIN_PROFILE} method="get">
-                        <button className="bg-linkedin-blue p-3 rounded font-bold text-white">Linkedin Profile</button>
+                        <Button text='linkedin-profile'/>
                     </form>
                     <form action={GITHUB_PROFILE} method="get">
                         <button className="bg-github-black p-3 rounded font-bold text-github-white-one ml-5">Github Profile</button>
